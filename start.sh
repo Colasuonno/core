@@ -25,5 +25,9 @@ fi
 gnome-terminal -- /bin/bash -c 'screen -x core; read;'
 screen -S core -p 0 -X stuff $'clear^M\ntail -f logs/latest.log^M'
 
+sleep 1
 print_log "green" "Starting core on $date"
 print_log "green" "Core has been started"
+cd monitor
+./monitor.sh
+cd -
