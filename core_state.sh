@@ -1,7 +1,9 @@
 #!/bin/bash
 
 function prop {
+    cd /home/colasuonno/Desktop/Dev/general_project/Core
     grep "${1}" info.properties|cut -d'=' -f2
+    cd -
 }
 
 # Just getting app state

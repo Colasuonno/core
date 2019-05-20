@@ -13,8 +13,15 @@ print_log(){
 }
 
 print_log "white" "Waiting for monitor response..."
-sleep 1
-print_log "get" "green" "OK"
+color="white"
+status_core=`bash /home/colasuonno/Desktop/Dev/general_project/Core/core_state.sh check`
+echo $status_core
+if [[ $status_core  =~ "stop" ]]; then
+	color="red"
+else
+	color="green"
+fi
+print_log "get" $color $status_core
 print_log "Core Status.. $temp"
 #print_log "green" "Loading usb connected.."
 #sleep 2
