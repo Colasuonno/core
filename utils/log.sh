@@ -27,8 +27,8 @@ if [ ${#@} -gt 1 ]; then
 		echo $escape_key$result${reduced#?}
 	else
 		get_key "$1"
-		echo $escape_key$result${built_string#?} >> ../logs/latest.log
+		echo $escape_key$result${built_string#?} >> /home/colasuonno/Desktop/Dev/general_project/Core/logs/latest.log
 	fi
 else
-	echo $1 >> ../logs/latest.log
+	echo $1 >> /home/colasuonno/Desktop/Dev/general_project/Core/logs/latest.log
 fi

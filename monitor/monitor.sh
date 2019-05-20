@@ -13,6 +13,9 @@ print_log(){
 }
 
 print_log "white" "Waiting for monitor response..."
-sleep 3
+sleep 1
 print_log "get" "green" "OK"
 print_log "Core Status.. $temp"
+#print_log "green" "Loading usb connected.."
+#sleep 2
+#perl usb.pl getting usb info
